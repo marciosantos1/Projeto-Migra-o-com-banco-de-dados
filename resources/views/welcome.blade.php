@@ -70,7 +70,7 @@
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
+                        <a href="{{ route('/categoria') }}">Categoria</a>
 
                         @if (Route::has('register'))
                             <a href="{{ route('register') }}">Register</a>
@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
+                    <a href="http://localhost:8000/categoria">Categorias</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://blog.laravel.com">Blog</a>
