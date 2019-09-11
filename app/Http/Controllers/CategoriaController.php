@@ -18,12 +18,31 @@ class CategoriaController extends Controller
     }
     
      public function store(Request $request){
+       
         $categoria = new \App\Categoria();
-        
         $categoria->nomcat = $request->get('nomcat');
         $categoria->save();
         
-        redirect('/categoria');
+        return redirect('/categoria')->with('msg', 'Categoria cadastrada com sucesso !!!');
+                
+    }
+     public function destroy($codcat){
+         $categoria = \App\Categoria:: find($codcat); // find = busca no banco de dados e faz o que se pede
+         $categoria->delete();
+         return redirect('/categoria')->with('catEliminada', 'Categoria eliminada !!!');
+     }
+     public function edit($codcat){
+         $categoria = \App\Categoria:: find($codcat);  // find = busca no banco de dados e faz o que se pede
+         
+         return view('categoria.edit', compact('categoria')); // COMPACT passa as variaveis para a view.
+     }
+     public function update(Request $request, $codcat){
+       
+        $categoria = \App\Categoria::find($codcat);  // find = busca no banco de dados e faz o que se pede
+        $categoria->nomcat = $request->get('nomcat');
+        $categoria->save();
+        
+        return redirect('/categoria')->with('alterada', 'Categoria alterada com sucesso !!!');
                 
     }
 }

@@ -9,31 +9,49 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+        <script>
+            window.onload = function (){
+            @if (session()->get('msg'))
+                    alert('{{session()->get('msg')}}');
+            @endif
+            };
+        </script>
+
     </head>
-    <body>
-        
+    <body style="background: #A5A5A5">
+
         <a href="{{route('categoria.create')}}">Adicionar Categoria</a><br/>
-            
-        
-           <!-- Listagem de categorias -->   
-           <table style="width: 50%;">
-               <thead>
-                   <tr>
-                       <td style="background: #34ce57">Cód. </td>
-                       <td style="background: #34ce57">Nome </td>
-                       <td style="background: #34ce57">Ação </td>
-                   </tr> 
-               <tbody>
-                   @foreach ($categorias as $c)
-                   <tr>
-                       <td style="background: #34ce57">{{$c->codcat}} </td>
-                       <td style="background: #34ce57">{{$c->nomcat}}</td>
-                       <td style="background: #34ce57">Editar | Excluir</td>
-                   </tr> 
-                   @endforeach
-               </tbody>
-               </thead>
-          </table>          
-    </body>
+
+
+        <!-- Listagem de categorias -->   
+        <table style="width: 40%;">
+            <thead style="text-align: center">
+                <tr>
+                    <td style="background: #BEE9EA">Cód. </td>
+                    <td style="background: #BEE9EA">Nome </td>
+                    <td style="background: #BEE9EA">Ação </td>
+                </tr> 
+            <tbody >
+                @foreach ($categorias as $c)
+                <tr>
+                    <td style="background: #9ba2ab">{{$c->codcat}} </td>
+                    <td style="background: #9ba2ab">{{$c->nomcat}}</td>
+                    <td style="text-align: center">
+                        
+                        <button onclick="location.href='{{route('categoria.edit', $c->codcat)}}'" type="button">Editar</button>
+                        
+                        <form action="{{route('categoria.destroy', $c->codcat)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Excluir</button>
+                            
+                        </form>
+                    </td>
+                </tr> 
+                @endforeach
+            </tbody>
+        </thead>
+    </table>          
+</body>
 </html>
 

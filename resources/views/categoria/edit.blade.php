@@ -10,15 +10,21 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     </head>
-    <body>                                         <!-- {{ }} = LINGUAGEM DE EXPRESSÃO vai ser interpretada por outras linguagens.-->
-        <form action="{{route('categoria.store')}}" method="post">
+    <body>
+        
+        <h3>Editando a categoria {{$categoria->nomcat}}</h3>
+        
+        <form action="{{route('categoria.update', $categoria->codcat)}}" method="post">
             @csrf <!--para evitar envio de formularios atraves de outras pessoas ao site-->
+            @method('patch')
+            
             
             <label for='nomcat'>Nome da categoria</label><br/>
-            <input type="text" name="nomcat" id="nomcat"/><br/><br/>
-            <button type="submit">Adicionar</button>
+            <input type="text" name="nomcat" id="nomcat" value="{{$categoria->nomcat}}"/><br/><br/>
+            <button type="submit">Editar</button>
            
         </form>              
     </body>
 </html>
+
 
