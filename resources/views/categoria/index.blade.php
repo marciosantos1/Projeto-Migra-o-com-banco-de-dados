@@ -51,7 +51,40 @@
                 @endforeach
             </tbody>
         </thead>
-    </table>          
+    </table> 
+        
+         <a href="{{route('cliente.create')}}">Adicionar Cliente</a><br/>
+
+
+        <!-- Listagem de clientes -->   
+        <table style="width: 40%;">
+            <thead style="text-align: center">
+                <tr>
+                    <td style="background: #BEE9EA">Cód. </td>
+                    <td style="background: #BEE9EA">Nome </td>
+                    <td style="background: #BEE9EA">Endereço </td>
+                </tr> 
+            <tbody >
+                @foreach ($cliente as $cli)
+                <tr>
+                    <td style="background: #9ba2ab">{{$c->codcli}} </td>
+                    <td style="background: #9ba2ab">{{$c->nomcli}}</td>
+                    <td style="text-align: center">
+                        
+                        <button onclick="location.href='{{route('cliente.edit', $cli->codcli)}}'" type="button">Editar</button>
+                        
+                        <form action="{{route('cliente.destroy', $c->codcli)}}" method="post">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit">Excluir</button>
+                            
+                        </form>
+                    </td>
+                </tr> 
+                @endforeach
+            </tbody>
+        </thead>
+    </table>
 </body>
 </html>
 
