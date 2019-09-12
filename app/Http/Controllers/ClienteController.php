@@ -35,10 +35,6 @@ class ClienteController extends Controller
         return redirect('/cliente')->with('msg', 'Cliente cadastrado com sucesso !!!');
     }
 
-    public function show()
-    {
-       
-    }
 
     public function edit($codcli)
     {
