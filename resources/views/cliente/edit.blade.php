@@ -21,7 +21,7 @@
             
             <label for='nomcli'>Nome do Cliente</label><br/>
             <input type="text" name="nomcli" id="nomcli" value="{{$cliente->nomcli}}"/><br/><br/>
-            <button type="submit">Editar</button>
+            <button type="submit">Salvar</button>
            
         </form>
     </body>

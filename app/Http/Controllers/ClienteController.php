@@ -22,6 +22,7 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $cliente = new \App\Cliente();
+        $cliente->codcli = $request->get('codcli');
         $cliente->nomcli = $request->get('nomcli');
         $cliente->cpfcli = $request->get('cpfcli');
         $cliente->endcli = $request->get('endcli'); 

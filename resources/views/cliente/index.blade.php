@@ -29,7 +29,7 @@
         <table style="width: 40%;">
             <thead style="text-align: center">
                 <tr>
-                    
+                    <td style="background: #BEE9EA">Cód. </td>
                     <td style="background: #BEE9EA">Nome </td>
                     <td style="background: #BEE9EA">Cpf </td>
                     <td style="background: #BEE9EA">Endereço </td>
@@ -44,7 +44,7 @@
             <tbody > 
                 @foreach ($clientes as $cli)
                 <tr>
-                    
+                    <td style="background: #9ba2ab">{{$cli->codcli}}</td>
                     <td style="background: #9ba2ab">{{$cli->nomcli}}</td>
                     <td style="background: #9ba2ab">{{$cli->cpfcli}}</td>
                     <td style="background: #9ba2ab">{{$cli->endcli}}</td>
