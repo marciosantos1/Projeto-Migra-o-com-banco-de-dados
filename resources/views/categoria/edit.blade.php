@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel 112</title>
+        <title>Atualizar Categoria</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,16 +12,16 @@
     </head>
     <body>
         
-        <h3>Editando a categoria {{$categoria->nomcat}}</h3>
+     <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Atualizar Categoria: {{$categoria->nomcat}}</h3>
         
-        <form action="{{route('categoria.update', $categoria->codcat)}}" method="post">
+        <form action="{{route('categoria.update', $categoria->codcat)}}" method="post" style="width: 0%;padding: 10px; display: table; margin: auto">
             @csrf <!--para evitar envio de formularios atraves de outras pessoas ao site-->
             @method('patch')
             
             
             <label for='nomcat'>Nome da categoria</label><br/>
             <input type="text" name="nomcat" id="nomcat" value="{{$categoria->nomcat}}"/><br/><br/>
-            <button type="submit">Editar</button>
+            <button type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Salvar</button>
            
         </form> 
         

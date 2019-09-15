@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel Categoria</title>
+        <title>Editar/Listar Categoria</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -20,7 +20,7 @@
     </head>
     <body>
 
-        <a href="{{route('categoria.create')}}">Adicionar Categoria</a>
+        </br></br><a href="{{route('categoria.create')}}">Adicionar Categoria</a></br></br>
         
         <!-- Listagem de categorias -->   
         <table style="width: 40%;">
@@ -36,14 +36,14 @@
                 <tr>
                     <td style="background: #9ba2ab">{{$c->codcat}}</td>
                     <td style="background: #9ba2ab">{{$c->nomcat}}</td>
-                    <td style="text-align: center">
-
-                        <button onclick="location.href ='{{route('categoria.edit', $c->codcat)}}'" type="button">Editar</button>
+                    <td style="text-align: center; background: #9ba2ab;">
+                   
+                        <button onclick="location.href ='{{route('categoria.edit', $c->codcat)}}'" style="font-size: 80%; width: 60%;" type="button">Editar</button></br>
 
                         <form action="{{route('categoria.destroy', $c->codcat)}}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Excluir</button>
+                            <button type="submit" style="font-size: 80%; width: 60%;">Excluir</button>
 
                         </form>
                     </td> 

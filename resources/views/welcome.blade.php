@@ -93,7 +93,7 @@
                     <a href="http://localhost:8000/categoria">Categorias</a>
                     <a href="http://localhost:8000/cliente">Clientes</a>
                     <a href="http://localhost:8000/cliente/create">Cadastrar Clientes</a>
-                    <a href="http://localhost:8000/produtos">Produtos</a>                                      
+                    <a href="http://localhost:8000/produto">Produtos</a>                                      
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>

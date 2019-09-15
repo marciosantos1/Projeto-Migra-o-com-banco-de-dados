@@ -4,15 +4,18 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel 223</title>
+        <title>Cadastro Cliente</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     </head>
-    <body>                                                
+    <body>   
+        <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Cliente</h3></br></br>
         
-        <form action="{{route('cliente.store')}}" method="post">
+        <form action="{{route('cliente.store')}}" method="post" style="width: 0%;padding: 10px; display: table; margin: auto">
+    
+	
             @csrf <!--para evitar envio de formularios atraves de outras pessoas ao site-->
             
             <label for='nomcli'>Nome do cliente</label><br/>
@@ -40,7 +43,7 @@
             <input type="text" name="telcli" id="telcli"/><br/><br/>
             
             
-            <button type="submit">Adicionar</button>
+            <button type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Adicionar</button>
            
         </form></br>
         

@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel Cliente</title>
+        <title>Listar/Editar Cliente</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -18,15 +18,15 @@
         </script>
 
     </head>
-    <body style="background: #A5A5A5">
+    <body style="background: #EEE">
 
         
         
-         <a href="{{route('cliente.create')}}">Adicionar Cliente</a><br/>
+        <br/> <a href="{{route('cliente.create')}}">Adicionar Cliente</a><br/><br/>
 
 
         <!-- Listagem de clientes -->   
-        <table style="width: 40%;">
+        <table style="width: 70%;">
             <thead style="text-align: center">
                 <tr>
                     <td style="background: #BEE9EA">Cód. </td>
@@ -44,24 +44,24 @@
             <tbody > 
                 @foreach ($clientes as $cli)
                 <tr>
-                    <td style="background: #9ba2ab">{{$cli->codcli}}</td>
-                    <td style="background: #9ba2ab">{{$cli->nomcli}}</td>
-                    <td style="background: #9ba2ab">{{$cli->cpfcli}}</td>
-                    <td style="background: #9ba2ab">{{$cli->endcli}}</td>
-                    <td style="background: #9ba2ab">{{$cli->numcli}}</td>
-                    <td style="background: #9ba2ab">{{$cli->baicli}}</td>
-                    <td style="background: #9ba2ab">{{$cli->cidcli}}</td>
-                    <td style="background: #9ba2ab">{{$cli->ufcli}}</td>
-                    <td style="background: #9ba2ab">{{$cli->telcli}}</td>
+                    <td style="background: #BCD42A">{{$cli->codcli}}</td>
+                    <td style="background: #BCD42A">{{$cli->nomcli}}</td>
+                    <td style="background: #BCD42A">{{$cli->cpfcli}}</td>
+                    <td style="background: #BCD42A">{{$cli->endcli}}</td>
+                    <td style="background: #BCD42A">{{$cli->numcli}}</td>
+                    <td style="background: #BCD42A">{{$cli->baicli}}</td>
+                    <td style="background: #BCD42A">{{$cli->cidcli}}</td>
+                    <td style="background: #BCD42A">{{$cli->ufcli}}</td>
+                    <td style="background: #BCD42A">{{$cli->telcli}}</td>
                     
-                    <td style="text-align: center">
+                    <td style="text-align: center; background: #9ba2ab;">
                         
-                        <button onclick="location.href='{{route('cliente.edit', $cli->codcli)}}'" type="button">Editar</button>
+                        <button onclick="location.href='{{route('cliente.edit', $cli->codcli)}}'" style="font-size: 80%; width: 90%;" type="button">Editar</button></br>
                         
                         <form action="{{route('cliente.destroy', $cli->codcli)}}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button type="submit">Excluir</button>
+                            <button type="submit" style="font-size: 80%; width: 90%;">Excluir</button>
                             
                         </form>
                     </td>
