@@ -21,7 +21,7 @@
     <body style="background: #EEE">
 
         
-        
+        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
         <br/> <a href="{{route('cliente.create')}}">Adicionar Cliente</a><br/><br/>
 
 

@@ -10,8 +10,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     </head>
-    <body>   
-        <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Cliente</h3></br></br>
+    <body> 
+        <br/><a href="{{ url('/cliente') }}">Voltar</a><br/><br/>
+        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
+        <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Cliente</h3>
         
         <form action="{{route('cliente.store')}}" method="post" style="width: 0%;padding: 10px; display: table; margin: auto">
     

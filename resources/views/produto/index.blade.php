@@ -21,8 +21,8 @@
     <body style="background: #EEE">
 
         
-        
-        <br/> <a href="{{route('produto.create')}}">Adicionar Produto</a><br/><br/>
+        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
+        <br/><a href="{{route('produto.create')}}">Adicionar Produto</a><br/><br/>
 
 
         <!-- Listagem de clientes -->   

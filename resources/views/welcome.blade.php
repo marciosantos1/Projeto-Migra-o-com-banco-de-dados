@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>A Empresa</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -12,7 +12,7 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
+                background-color: #A5A5A5;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
@@ -75,28 +75,21 @@
                         <a href="{{ route('/cliente') }}">Cliente</a>
                         @T_else
                         <a href="{{ route('/produto') }}">Produto</a>
-                        
-
-                        @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
-                        @endif
+       
                     @endauth
                 </div>
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title m-b-md" style="color: #000">
+                    Empresa
                 </div>
 
                 <div class="links">
-                    <a href="http://localhost:8000/categoria">Categorias</a>
-                    <a href="http://localhost:8000/cliente">Clientes</a>
-                    <a href="http://localhost:8000/cliente/create">Cadastrar Clientes</a>
-                    <a href="http://localhost:8000/produto">Produtos</a>                                      
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="http://localhost:8000/categoria" style="color: #155724">Categorias</a>
+                    <a href="http://localhost:8000/cliente" style="color: #155724">Clientes</a>
+                    <a href="http://localhost:8000/produto" style="color: #155724">Produtos</a>                                      
+                    
                 </div>
             </div>
         </div>

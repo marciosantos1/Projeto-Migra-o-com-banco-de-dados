@@ -11,7 +11,8 @@
 
     </head>
     <body>
-       
+       <br/><a href="{{ url('/cliente') }}">Voltar</a><br/><br/>
+       <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
        <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Atualizar dados do Cliente: {{$cliente->nomcli}}</h3>
         
         <form action="{{route('cliente.update', $cliente->codcli)}}" method="post" style="width: 0%;padding: 10px; display: table; margin: auto">

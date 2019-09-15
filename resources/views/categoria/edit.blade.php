@@ -11,6 +11,9 @@
 
     </head>
     <body>
+        <br/><a href="{{ url('/categoria') }}">Voltar</a><br/><br/>
+
+        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
         
      <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Atualizar Categoria: {{$categoria->nomcat}}</h3>
         

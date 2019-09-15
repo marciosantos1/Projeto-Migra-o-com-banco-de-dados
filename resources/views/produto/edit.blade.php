@@ -11,7 +11,8 @@
 
     </head>
     <body>
-       
+       <br/><a href="{{ url('/produto') }}">Voltar</a><br/><br/>
+       <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
        <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Atualizar dados do Produto: {{$produto->nompro}}</h3>
         
         <form action="{{route('produto.update', $produto->codpro)}}" method="post" style="width: 0%;padding: 10px; display: table; margin: auto">

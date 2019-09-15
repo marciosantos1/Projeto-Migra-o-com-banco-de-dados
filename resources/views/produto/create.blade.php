@@ -10,7 +10,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     </head>
-    <body>   
+    <body>
+        <br/><a href="{{ url('/produto') }}">Voltar</a><br/><br/>
+        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
         <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Produto</h3></br></br>
         
         <form action="{{route('produto.store')}}" method="post" style="width: 0%;padding: 10px; display: table; margin: auto">

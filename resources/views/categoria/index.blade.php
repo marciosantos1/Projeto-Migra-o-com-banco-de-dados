@@ -19,7 +19,7 @@
 
     </head>
     <body>
-
+        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
         </br></br><a href="{{route('categoria.create')}}">Adicionar Categoria</a></br></br>
         
         <!-- Listagem de categorias -->   
