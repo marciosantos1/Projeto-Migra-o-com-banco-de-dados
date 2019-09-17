@@ -27,27 +27,27 @@
 
         <!-- Listagem de clientes -->   
         <table style="width: 70%;">
-            <thead style="text-align: center">
+            <thead style="background: #4dc0b5; text-align: center;">
                 <tr>
-                    <td style="background: #BEE9EA">Cód.Categ </td>
-                    <td style="background: #BEE9EA">Nome.Categ </td>
-                    <td style="background: #BEE9EA">Cód.Prod </td>
-                    <td style="background: #BEE9EA">Nome </td>
-                    <td style="background: #BEE9EA">Descrição </td>
-                    <td style="background: #BEE9EA">Valor </td>        
-                    <td style="background: #BEE9EA">Ação </td>
+                    <td>Cód.Categ </td>
+                    
+                    <td>Cód.Prod </td>
+                    <td>Nome </td>
+                    <td>Descrição </td>
+                    <td>Valor </td>        
+                    <td>Ação </td>
                 </tr> 
             </thead>
             <tbody > 
                 @foreach ($produtos as $c)
-                <tr>
-                    <td style="background: #BCD42A">{{$c->codcat}}</td>
-                    <td style="background: #BCD42A">{{$c->nomcat}}</td>
-                    <td style="background: #BCD42A">{{$c->codpro}}</td>
-                    <td style="background: #BCD42A">{{$c->nompro}}</td>
-                    <td style="background: #BCD42A">{{$c->despro}}</td>
-                    <td style="background: #BCD42A">{{$c->vlrpro}}</td>
-                    <td style="text-align: center; background: #9ba2ab;">
+                <tr style="text-align: center; background: #ced4da">
+                    <td>{{$c->codcat}}</td>
+                   
+                    <td>{{$c->codpro}}</td>
+                    <td>{{$c->nompro}}</td>
+                    <td>{{$c->despro}}</td>
+                    <td>{{$c->vlrpro}}</td>
+                    <td>
                         
                         <button onclick="location.href='{{route('produto.edit', $c->codpro)}}'" style="font-size: 80%; width: 90%;" type="button">Editar</button></br>
                         

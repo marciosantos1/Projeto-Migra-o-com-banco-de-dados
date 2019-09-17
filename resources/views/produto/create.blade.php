@@ -10,7 +10,7 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     </head>
-    <body>
+    <body style="background-color: #e1e1e8">
         <br/><a href="{{ url('/produto') }}">Voltar</a><br/><br/>
         <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
         <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Produto</h3></br></br>
@@ -19,8 +19,13 @@
     
             @csrf <!--para evitar envio de formularios atraves de outras pessoas ao site-->
             
-            <label for='codcat'>Cód. Categoria</label><br/>
-            <input type="text" name="codcat" id="codcat"/><br/><br/>            
+              <select name="codcat" id="codcat">
+               <option>Categoria</option>
+               @foreach ($categoria as $cat)
+               <option  value="{{$cat->codcat}}">{{$cat->nomcat}}</option>
+             
+               @endforeach
+           </select> <br/><br/>            
             
             <label for='nompro'>Nome do produto</label><br/>
             <input type="text" name="nompro" id="nompro"/><br/><br/>

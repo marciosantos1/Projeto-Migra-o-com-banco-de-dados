@@ -24,19 +24,19 @@
         
         <!-- Listagem de categorias -->   
         <table style="width: 40%;">
-            <thead style="text-align: center">
+            <thead style="background: #4dc0b5; text-align: center;">
                 <tr>
-                    <td style="background: #BEE9EA">Cód. </td>
-                    <td style="background: #BEE9EA">Nome </td>
-                    <td style="background: #BEE9EA">Ação </td>
+                    <td>Cód. </td>
+                    <td>Nome </td>
+                    <td>Ação </td>
                 </tr> 
             </thead>
             <tbody>
                 @foreach ($categorias as $c)
-                <tr>
-                    <td style="background: #9ba2ab">{{$c->codcat}}</td>
-                    <td style="background: #9ba2ab">{{$c->nomcat}}</td>
-                    <td style="text-align: center; background: #9ba2ab;">
+                <tr style="background: #ced4da; text-align: center;">
+                    <td>{{$c->codcat}}</td>
+                    <td>{{$c->nomcat}}</td>
+                    <td>
                    
                         <button onclick="location.href ='{{route('categoria.edit', $c->codcat)}}'" style="font-size: 80%; width: 60%;" type="button">Editar</button></br>
 

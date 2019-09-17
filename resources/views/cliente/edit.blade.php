@@ -30,7 +30,7 @@
             <input type="text" name="endcli" id="endcli"/><br/><br/>
                         
             <label for='numcli'>Número</label><br/>
-            <input type="text" name="numcli" id="numcli"/><br/><br/>
+            <input type="number" name="numcli" id="numcli"/><br/><br/>
             
             <label for='baicli'>Bairro</label><br/>
             <input type="text" name="baicli" id="baicli"/><br/><br/>

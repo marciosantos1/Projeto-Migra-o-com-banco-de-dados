@@ -58,7 +58,7 @@ class ClienteController extends Controller
        
        $cliente->save();
         
-        return redirect('/cliente')->with('alterado', 'Cliente alterado com sucesso !!!');
+        return redirect('/cliente')->with('msg', 'Cliente alterado com sucesso !!!');
     }
 
     
@@ -66,6 +66,6 @@ class ClienteController extends Controller
     {
        $cliente = \App\Cliente:: find($codcli); // find = busca no banco de dados e faz o que se pede
          $cliente->delete();
-         return redirect('/cliente')->with('cliEliminado', 'Cliente eliminado !!!');
+         return redirect('/cliente')->with('msg', 'Cliente eliminado !!!');
     }
 }

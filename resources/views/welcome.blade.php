@@ -82,7 +82,7 @@
 
             <div class="content">
                 <div class="title m-b-md" style="color: #000">
-                    Empresa
+                    Título da Página
                 </div>
 
                 <div class="links">

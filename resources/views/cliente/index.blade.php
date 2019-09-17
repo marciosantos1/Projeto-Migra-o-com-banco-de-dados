@@ -27,34 +27,34 @@
 
         <!-- Listagem de clientes -->   
         <table style="width: 70%;">
-            <thead style="text-align: center">
+            <thead style="background: #4dc0b5; text-align: center;">
                 <tr>
-                    <td style="background: #BEE9EA">Cód. </td>
-                    <td style="background: #BEE9EA">Nome </td>
-                    <td style="background: #BEE9EA">Cpf </td>
-                    <td style="background: #BEE9EA">Endereço </td>
-                    <td style="background: #BEE9EA">Número </td>
-                    <td style="background: #BEE9EA">Bairro </td>
-                    <td style="background: #BEE9EA">Cidade </td>
-                    <td style="background: #BEE9EA">Estado </td>
-                    <td style="background: #BEE9EA">Telefone </td>
-                    <td style="background: #BEE9EA">Ação </td>
+                    <td>Cód. </td>
+                    <td>Nome </td>
+                    <td>Cpf </td>
+                    <td>Endereço </td>
+                    <td>Número </td>
+                    <td>Bairro </td>
+                    <td>Cidade </td>
+                    <td>Estado </td>
+                    <td>Telefone </td>
+                    <td>Ação </td>
                 </tr> 
             </thead>
             <tbody > 
                 @foreach ($clientes as $cli)
-                <tr>
-                    <td style="background: #BCD42A">{{$cli->codcli}}</td>
-                    <td style="background: #BCD42A">{{$cli->nomcli}}</td>
-                    <td style="background: #BCD42A">{{$cli->cpfcli}}</td>
-                    <td style="background: #BCD42A">{{$cli->endcli}}</td>
-                    <td style="background: #BCD42A">{{$cli->numcli}}</td>
-                    <td style="background: #BCD42A">{{$cli->baicli}}</td>
-                    <td style="background: #BCD42A">{{$cli->cidcli}}</td>
-                    <td style="background: #BCD42A">{{$cli->ufcli}}</td>
-                    <td style="background: #BCD42A">{{$cli->telcli}}</td>
+                <tr style="text-align: center; background: #ced4da">
+                    <td>{{$cli->codcli}}</td>
+                    <td>{{$cli->nomcli}}</td>
+                    <td>{{$cli->cpfcli}}</td>
+                    <td>{{$cli->endcli}}</td>
+                    <td>{{$cli->numcli}}</td>
+                    <td>{{$cli->baicli}}</td>
+                    <td>{{$cli->cidcli}}</td>
+                    <td>{{$cli->ufcli}}</td>
+                    <td>{{$cli->telcli}}</td>
                     
-                    <td style="text-align: center; background: #9ba2ab;">
+                    <td>
                         
                         <button onclick="location.href='{{route('cliente.edit', $cli->codcli)}}'" style="font-size: 80%; width: 90%;" type="button">Editar</button></br>
                         
