@@ -15,7 +15,7 @@
        </script>
 
     </head>
-    <body>
+    <body style="background-image:url('http://www.osmais.com/wallpapers/201603/estrada-livre-wallpaper.jpg'); background-size: 1366px 768px;">
         
         <script>
                function eliminarCategoria(idForm, destino){
@@ -44,10 +44,10 @@
            }
         </script>
         
-        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
+        <br/><a href="{{ url('/') }}" style="color: yellow">Página Inicial</a><br/><br/>
  
         
-       </br></br><a href="{{route('categoria.create')}}">Adicionar Categoria</a></br></br>
+       </br></br><a href="{{route('categoria.create')}}" style="color: yellow">Adicionar Categoria</a></br></br>
         
         <!-- Listagem de categorias -->   
         <table style="width: 40%;">

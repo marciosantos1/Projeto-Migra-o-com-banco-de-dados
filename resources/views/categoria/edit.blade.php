@@ -10,10 +10,10 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
     </head>
-    <body>
-        <br/><a href="{{ url('/categoria') }}">Voltar</a><br/><br/>
+    <body style="background-image:url('http://www.osmais.com/wallpapers/201603/estrada-livre-wallpaper.jpg'); background-size: 1366px 768px;">
+        <br/><a href="{{ url('/categoria') }}" style="color: yellow">Voltar</a><br/><br/>
 
-        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
+        <br/><a href="{{ url('/') }}" style="color: yellow">Página Inicial</a><br/><br/>
         
      <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Atualizar Categoria: {{$categoria->nomcat}}</h3>
         

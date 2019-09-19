@@ -12,12 +12,13 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #A5A5A5;
-                color: #636b6f;
+                background-image:url('http://www.osmais.com/wallpapers/201603/estrada-livre-wallpaper.jpg');
+                color: yellow;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                background-size: 1366px 768px;
             }
 
             .full-height {
@@ -82,13 +83,13 @@
 
             <div class="content">
                 <div class="title m-b-md" style="color: #000">
-                    Título da Página
+                    Titulo da Pagina
                 </div>
 
                 <div class="links">
-                    <a href="http://localhost:8000/categoria" style="color: #155724">Categorias</a>
-                    <a href="http://localhost:8000/cliente" style="color: #155724">Clientes</a>
-                    <a href="http://localhost:8000/produto" style="color: #155724">Produtos</a>                                      
+                    <a href="http://localhost:8000/categoria" style="color: #ffed4a; font-size: 25px" >Categorias</a>
+                    <a href="http://localhost:8000/cliente" style="color: #ffed4a; font-size: 25px">Clientes</a>
+                    <a href="http://localhost:8000/produto" style="color: #ffed4a; font-size: 25px">Produtos</a>                                      
                     
                 </div>
             </div>
