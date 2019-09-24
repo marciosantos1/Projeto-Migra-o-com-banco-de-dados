@@ -8,22 +8,33 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+        
+        <!--Script com Link de JQuery.-->
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+       
+       <!-- Script com link da classe CATEGORIA.-->
+       <script src="{{ url('/') }}/js/categoria.js" type="text/javascript"></script>
+       
     </head>
     <body style="background-image:url('http://www.osmais.com/wallpapers/201603/estrada-livre-wallpaper.jpg'); background-size: 1366px 768px;" >
-        <br/><a href="{{ url('/categoria') }}" style="color: yellow">Voltar</a><br/><br/>
-        <br/><a href="{{ url('/') }}" style="color: yellow">Página Inicial</a><br/><br/>
+    
+        <button onclick="location.href = '{{'/categoria'}}'" style="color: blue">Voltar</button>
+        
+        <button onclick="location.href = '{{'/'}}'" style="color: blue">Página Inicial</button>
+        
       <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Categoria</h3>
 
-        <form action="{{route('categoria.store')}}" method="post"style="width: 0%;padding: 10px; display: table; margin: auto">
+      <form id="formAdd" onsubmit="return adicionarCategoria('{{route('categoria.store')}}');" action="" method="post"style="width: 0%;padding: 10px; display: table; margin: auto">
             @csrf <!--para evitar envio de formularios atraves de outras pessoas ao site-->
             
-            <label for='nomcat'>Nome da categoria</label><br/>
+            <label for='nomcat' >Nome da categoria</label><br/>
             <input placeholder="digite..." type="text" name="nomcat" id="nomcat"/><br/><br/>
-            <button type="submit"style="width: 50%;padding: 10px; display: table; margin: auto">Salvar</button>
+            <button type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Salvar</button>
            
+            
         </form>
-   
+       
+          
     </body>
 </html>
 

@@ -8,46 +8,28 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-       <script
-       src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+        
+         <!--Script com Link de JQuery.-->
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
        
-       </script>
+       <!-- Script com link da classe CATEGORIA.-->
+       <script src="{{ url('/') }}/js/categoria.js" type="text/javascript"></script>
+       
 
     </head>
     <body style="background-image:url('http://www.osmais.com/wallpapers/201603/estrada-livre-wallpaper.jpg'); background-size: 1366px 768px;">
         
-        <script>
-               function eliminarCategoria(idForm, destino){
-                   dadosForm = $('#'+idForm).serialize();
-                   
-                   $.ajax({
-                   method: 'post',
-                   url: destino,
-                   data: dadosForm,
-                   datatype: 'html',
-                   success: function(data){
-                     //ação de sucesso 
-                     if (data == 'true'){
-                        $('linha'+idForm).remove(); // pega a linha do html para excluir
-                     }else{
-                          alert('Não foi possível eliminar a categoria!');
-                     }
-                   },
-                   error: function (argument){
-                       // ação de erro
-                        alert('Erro ao eliminar categoria!');
-                   }
-                   
-               });
-               return false;
-           }
-        </script>
         
-        <br/><a href="{{ url('/') }}" style="color: yellow">Página Inicial</a><br/><br/>
- 
-        
-       </br></br><a href="{{route('categoria.create')}}" style="color: yellow">Adicionar Categoria</a></br></br>
+        <button onclick="location.href = '{{'/'}}'" style="color: blue">Página Inicial</button><em>  </em>
+       
+        <button onclick="location.href = '{{route('categoria.create')}}'" style="color: blue">Adicionar Categoria</button>
+       </br></br>
+       
+       <br/>
+       <button onclick="mostrarEsconderTitulo()">Mostrar/Esconder Título</button>
+       <br/>
+       
+       <h2 id="titulo" hidden>Listagem de Categorias</h2>
         
         <!-- Listagem de categorias -->   
         <table style="width: 40%;">
