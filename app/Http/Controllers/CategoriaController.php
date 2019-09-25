@@ -40,8 +40,9 @@ class CategoriaController extends Controller
         $categoria = \App\Categoria::find($codcat);  // find = busca no banco de dados e faz o que se pede
         $categoria->nomcat = $request->get('nomcat');
         $categoria->save();
+        return "true";
         
-        return redirect('/categoria')->with('msg', 'Categoria alterada com sucesso !!!');
+        //return redirect('/categoria')->with('msg', 'Categoria alterada com sucesso !!!');
                 
     }
 }

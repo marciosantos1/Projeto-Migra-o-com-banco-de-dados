@@ -9,6 +9,9 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="{{ url('/') }}/css/style.css"/>
+        
         <!--Script com Link de JQuery.-->
        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
        
@@ -22,6 +25,7 @@
         
         <button onclick="location.href = '{{'/'}}'" style="color: blue">Página Inicial</button>
         
+      <br/><br/><br/><br/><br/><br/>
       <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Categoria</h3>
 
       <form id="formAdd" onsubmit="return adicionarCategoria('{{route('categoria.store')}}');" action="" method="post"style="width: 0%;padding: 10px; display: table; margin: auto">
@@ -29,11 +33,13 @@
             
             <label for='nomcat' >Nome da categoria</label><br/>
             <input placeholder="digite..." type="text" name="nomcat" id="nomcat"/><br/><br/>
-            <button type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Salvar</button>
-           
+            <button id="btnSalvar" type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Salvar</button><br/><br/>
+          
+            <div id="status" class="sucesso"></div><br/>
+            <div id="status" class="erro"></div><br/>
             
         </form>
-       
+      
           
     </body>
 </html>
