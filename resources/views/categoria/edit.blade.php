@@ -20,9 +20,9 @@
 
     </head>
     <body style="background-image:url('http://www.osmais.com/wallpapers/201603/estrada-livre-wallpaper.jpg'); background-size: 1366px 768px;">
-        <br/><a href="{{ url('/categoria') }}" style="color: yellow">Voltar</a><br/><br/>
-
-        <br/><a href="{{ url('/') }}" style="color: yellow">Página Inicial</a><br/><br/>
+        <button onclick="location.href = '{{'/categoria'}}'" style="color: blue">Voltar</button>
+        
+        <button onclick="location.href = '{{'/'}}'" style="color: blue">Página Inicial</button>
         
      <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Atualizar Categoria: {{$categoria->nomcat}}</h3>
         
@@ -34,12 +34,10 @@
             <label for='nomcat'>Nome da categoria</label><br/>
             <input type="text" name="nomcat" id="nomcat" value="{{$categoria->nomcat}}"/><br/><br/>
           <button id="btnSalvarAltCat"type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Salvar</button>
-           
-            <div id="status" class="sucesso"></div><br/>
-            <div id="status" class="erro"></div><br/>
-            
+       
         </form> 
-        
+            <div id="status" class="sucesso" style="width: 20%;padding: 20px; display: table; margin: auto"></div><br/>
+            <div id="status" class="erro" style="width: 20%;padding: 20px; display: table; margin: auto"></div><br/>
         
     </body>
 </html>

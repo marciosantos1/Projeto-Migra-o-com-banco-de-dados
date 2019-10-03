@@ -8,14 +8,24 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        
+               <!-- Link CSS -->
+        <link rel="stylesheet" href="{{ url('/') }}/css/style.css"/>
+        
+         <!--Script com Link de JQuery.-->
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+       
+       <!-- Script com link da classe CLIENTE.-->
+       <script src="{{ url('/') }}/js/cliente.js" type="text/javascript"></script>
 
     </head>
     <body style="background-color: #e1e1e8"> 
-        <br/><a href="{{ url('/cliente') }}">Voltar</a><br/><br/>
-        <br/><a href="{{ url('/') }}">Página Inicial</a><br/><br/>
+        <button onclick="location.href = '{{'/cliente'}}'" style="color: blue">Voltar</button>
+        
+        <button onclick="location.href = '{{'/'}}'" style="color: blue">Página Inicial</button>
         <h3 style="width: 0%;padding: 10px; display: table; margin: auto">Cadastrar Cliente</h3>
         
-        <form action="{{route('cliente.store')}}" method="post" style="width: 0%;padding: 10px; display: table; margin: auto">
+        <form id="formAdd" onsubmit="return adicionarCliente('{{route('cliente.store')}}');" action="" method="post" style="width: 0%;padding: 10px; display: table; margin: auto">
     
 	
             @csrf <!--para evitar envio de formularios atraves de outras pessoas ao site-->
@@ -45,7 +55,7 @@
             <input type="text" name="telcli" id="telcli"/><br/><br/>
             
             
-            <button type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Adicionar</button>
+            <button id="btnAdicionarCli" type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Adicionar</button>
            
         </form></br>
         

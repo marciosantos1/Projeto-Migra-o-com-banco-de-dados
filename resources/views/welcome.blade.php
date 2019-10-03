@@ -8,6 +8,14 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+               <!-- Link CSS -->
+        <link rel="stylesheet" href="{{ url('/') }}/css/style.css"/>
+        
+         <!--Script com Link de JQuery.-->
+       <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+       
+       <!-- Script com link da classe CATEGORIA.-->
+       <script src="{{ url('/') }}/js/categoria.js" type="text/javascript"></script>
 
         <!-- Styles -->
         <style>

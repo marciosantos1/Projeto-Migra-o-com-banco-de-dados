@@ -33,13 +33,11 @@
             
             <label for='nomcat' >Nome da categoria</label><br/>
             <input placeholder="digite..." type="text" name="nomcat" id="nomcat"/><br/><br/>
-            <button id="btnSalvar" type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Salvar</button><br/><br/>
-          
-            <div id="status" class="sucesso"></div><br/>
-            <div id="status" class="erro"></div><br/>
+            <button id="btnSalvar" type="submit" style="width: 50%;padding: 10px; display: table; margin: auto">Salvar</button>
             
         </form>
-      
+            <div id="status" class="sucesso" style="width: 20%;padding: 20px; display: table; margin: auto"></div><br/>
+            <div id="status" class="erro" style="width: 20%;padding: 20px; display: table; margin: auto"></div><br/>
           
     </body>
 </html>
